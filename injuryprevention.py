@@ -11,7 +11,7 @@ import streamlit as st
 
 
 # loading the saved model
-loaded_model = pickle.load(open('F:/Projects/Diabetes Prediction/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 # creating a function for Prediction
@@ -29,9 +29,9 @@ def diabetes_prediction(input_data):
     print(prediction)
 
     if (prediction[0] == 0):
-      return 'Depression not detected'
+      return 'Low Injury Chance'
     else:
-      return 'Depression Detected. Remember that you are not alone and there is hope for recovery.'
+      return '!!High Injury Chance!!'
   
     
   
@@ -39,7 +39,7 @@ def main():
     
     
     # giving a title
-    st.title('Depression Prediction Web App')
+    st.title('Injury Prvention Web App')
     
     
     # getting the input data from the user
@@ -60,7 +60,7 @@ def main():
     
     # creating a button for Prediction
     
-    if st.button('Depression Test Result'):
+    if st.button('Injury Detection Test Result'):
         diagnosis = diabetes_prediction([Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age])
         
         
@@ -88,5 +88,4 @@ if __name__ == '__main__':
     
     
   
-    
-  
+   
