@@ -39,7 +39,7 @@ def main():
     
     
     # giving a title
-    st.title('Injury Prvention Web App')
+    st.title('Injury Prevention Web App')
     
     
     # getting the input data from the user
